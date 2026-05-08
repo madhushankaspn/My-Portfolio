@@ -13,7 +13,7 @@ function App() {
           transition={{ duration: 0.5 }}
           className="text-[#64ffda] text-2xl font-bold cursor-pointer"
         >
-          Supun.
+          Supun
         </motion.div>
         
         <motion.ul 
@@ -50,7 +50,7 @@ function App() {
         >
           <p className="text-[#64ffda] text-lg font-mono mb-4">Hi, my name is</p>
           <h1 className="text-5xl md:text-7xl font-bold text-[#ccd6f6] mb-4">
-            M. H. S. Perera.
+            Supun Madhusanka
           </h1>
           <h2 className="text-4xl md:text-6xl font-bold text-[#8892b0] mb-6">
             I build things for the web.
@@ -60,9 +60,13 @@ function App() {
           </p>
           
           <div className="flex space-x-6">
-            <button className="border-2 border-[#64ffda] text-[#64ffda] px-8 py-3 rounded font-bold hover:bg-[#64ffda] hover:text-[#0a192f] transition-all duration-300 shadow-[0_0_15px_rgba(100,255,218,0.3)] hover:shadow-[0_0_25px_rgba(100,255,218,0.6)]">
-              Download CV
-            </button>
+            <a 
+     href="/Supun_CV.pdf" 
+     download="Supun_CV.pdf" 
+     className="inline-block border-2 border-[#64ffda] text-[#64ffda] px-8 py-3 rounded font-bold hover:bg-[#64ffda] hover:text-[#0a192f] transition-all duration-300 shadow-[0_0_15px_rgba(100,255,218,0.3)] hover:shadow-[0_0_25px_rgba(100,255,218,0.6)]"
+   >
+     Download CV
+   </a>
           </div>
         </motion.div>
 
@@ -80,7 +84,7 @@ function App() {
             {/* ඔයාගේ Photo එක (දැනට Dummy Photo එකක් දාලා තියෙන්නේ) */}
             <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-[#0a192f] z-10 bg-[#112240]">
               <img 
-                src="https://api.dicebear.com/7.x/avataaars/svg?seed=Supun&backgroundColor=b6e3f4" 
+                src="public/profile.jpg" 
                 alt="Profile" 
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />
