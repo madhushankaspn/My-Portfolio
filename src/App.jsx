@@ -1,28 +1,45 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+// Icons සඳහා (මේවා අපි කලින් install කරා)
+import { FiGithub, FiExternalLink } from 'react-icons/fi';
 
 function App() {
-  // අපේ Projects වල විස්තර (ඉස්සරහට මේවා එන්නේ Firebase එකෙන්)
+  // ඔයාගේ ඇත්ත Projects ටික
   const projects = [
     {
-      title: "Fresh Goviya",
-      description: "A digital farm-to-consumer mobile platform designed to connect farmers directly with buyers, removing middlemen and supporting multilingual accessibility.",
-      tech: ["Mobile App", "UI/UX", "Tech"],
+      title: "Smart Waste Management System",
+      description: "Configured secure Firebase Authentication and real-time Cloud Firestore database architecture. Conducted rigorous QA testing and debugging to handle edge cases and ensure a highly stable application. Managed team version control and agile workflow.",
+      tech: ["Flutter", "Dart", "Firebase", "Git"],
+      github: "https://github.com/madhushankaspn/smart-waste-app.git",
+      image: "/project-images/waste.jpg" // පින්තූරයේ නම
     },
     {
-      title: "Smart Garbage Collection Reporting",
-      description: "A mobile application for civic waste management featuring GPS integration and real-time reporting to keep the environment clean.",
-      tech: ["Flutter", "Firebase", "GPS"],
+      title: "Student Management System",
+      description: "Developed an MVC-based web application using Java EE to automate university operations. Engineered a secure Admin Dashboard utilizing JDBC Prepared Statements to ensure data integrity and prevent SQL Injection.",
+      tech: ["Java EE", "MySQL", "JDBC", "Bootstrap"],
+      github: "https://github.com/Java-team-dea/SMS-Project.git",
+      image: "/project-images/sms.jpg"
     },
     {
-      title: "EduPanel",
-      description: "A student management system focused on administrative CRUD functionality to easily manage student records.",
-      tech: ["PHP", "MySQL", "CSS"],
+      title: "Task Master",
+      description: "A Full-Stack CRUD application featuring a modern UI and a secure RESTful API architecture. Integrated MySQL database with Spring Data JPA for persistent data handling and conducted comprehensive API testing via Postman.",
+      tech: ["React.js", "Spring Boot", "MySQL", "REST API"],
+      github: "https://github.com/madhushankaspn/task-management-frontend.git",
+      image: "/project-images/task.jpg"
     },
     {
-      title: "Taste of Ceylon",
-      description: "A visually appealing web project showcasing the rich Sri Lankan food culture and heritage.",
-      tech: ["HTML", "CSS"],
+      title: "Discover Sri Lanka",
+      description: "A fully responsive tourism platform featuring a dynamic Hero Slideshow and destination media galleries. Implemented User Authentication and an Admin Panel for content management.",
+      tech: ["HTML5", "CSS3", "JavaScript"],
+      github: "https://github.com/madhushankaspn/sri-lanka-tourism.git",
+      image: "/project-images/tourism.jpg"
+    },
+    {
+      title: "LUXE Store",
+      description: "A premium e-commerce platform featuring a dark luxury aesthetic, shopping cart functionality, and promo code support. Implemented a comprehensive Admin Dashboard utilizing Browser LocalStorage.",
+      tech: ["Vanilla JS", "HTML5", "CSS3"],
+      github: "https://github.com/madhushankaspn/LUXE-Store.git",
+      image: "/project-images/luxe.jpg"
     }
   ];
 
@@ -37,7 +54,7 @@ function App() {
           transition={{ duration: 0.5 }}
           className="text-[#64ffda] text-2xl font-bold cursor-pointer"
         >
-          Supun.
+          Supun
         </motion.div>
         
         <motion.ul 
@@ -64,8 +81,6 @@ function App() {
 
       {/* Hero Section */}
       <main className="flex flex-col-reverse md:flex-row items-center justify-between px-10 md:px-20 py-20 max-w-7xl mx-auto min-h-[80vh]">
-        
-        {/* වම් පැත්ත: විස්තරය */}
         <motion.div 
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -74,11 +89,10 @@ function App() {
         >
           <p className="text-[#64ffda] text-lg font-mono mb-4">Hi, my name is</p>
           <h1 className="text-5xl md:text-7xl font-bold text-[#ccd6f6] mb-4">
-            M. H. S. Perera.
+            Supun Madhusanka
           </h1>
-          <h2 className="text-4xl md:text-5xl font-bold text-[#8892b0] mb-6">
-            I build things for the web & mobile.
-          </h2>
+          <br></br>
+          <br></br>
           <p className="text-[#8892b0] max-w-xl mb-10 text-lg leading-relaxed">
             I'm a Software Engineering student pursuing a B.Sc (Hons) degree at NSBM Green University. I specialize in full-stack development and have a strong focus on Software Quality Assurance (QA). I enjoy creating smart, scalable, and modern digital experiences.
           </p>
@@ -90,7 +104,6 @@ function App() {
           </div>
         </motion.div>
 
-        {/* දකුණු පැත්ත: Photo එක සහ Animation එක */}
         <motion.div 
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -124,7 +137,7 @@ function App() {
         </motion.h3>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <motion.div 
               key={index}
@@ -132,25 +145,48 @@ function App() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
-              className="bg-[#112240] p-8 rounded-lg hover:-translate-y-2 transition-transform duration-300 shadow-lg hover:shadow-2xl relative group"
+              className="bg-[#112240] rounded-xl overflow-hidden hover:-translate-y-2 transition-transform duration-300 shadow-lg hover:shadow-2xl flex flex-col group"
             >
-              <div className="flex justify-between items-center mb-6">
-                <div className="text-[#64ffda] text-4xl">📁</div>
-                <div className="flex space-x-3">
-                  <span className="text-[#ccd6f6] hover:text-[#64ffda] cursor-pointer">🔗</span>
-                </div>
+              {/* Project Image Box */}
+              <div className="h-48 overflow-hidden relative border-b border-[#233554]">
+                {/* නිල් පාට Overlay එකක් (Mouse එක ගෙනිච්චම අයින් වෙනවා) */}
+                <div className="absolute inset-0 bg-[#0a192f] opacity-50 group-hover:opacity-0 transition-opacity duration-300 z-10"></div>
+                <img 
+                  src={project.image} 
+                  alt={project.title} 
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  onError={(e) => {
+                    // පින්තූරය නැත්නම් පෙන්නන dummy පින්තූරය
+                    e.target.src = "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80";
+                  }}
+                />
               </div>
-              <h4 className="text-2xl font-bold text-[#ccd6f6] group-hover:text-[#64ffda] transition-colors mb-4">
-                {project.title}
-              </h4>
-              <p className="text-[#8892b0] text-sm leading-relaxed mb-6">
-                {project.description}
-              </p>
-              <ul className="flex flex-wrap gap-4 text-xs font-mono text-[#64ffda] opacity-70">
-                {project.tech.map((techItem, techIndex) => (
-                  <li key={techIndex}>{techItem}</li>
-                ))}
-              </ul>
+
+              {/* Project Details */}
+              <div className="p-6 flex flex-col flex-grow">
+                <div className="flex justify-between items-center mb-4">
+                  <h4 className="text-xl font-bold text-[#ccd6f6] group-hover:text-[#64ffda] transition-colors">
+                    {project.title}
+                  </h4>
+                  <div className="flex space-x-3">
+                    <a href={project.github} target="_blank" rel="noreferrer" className="text-[#ccd6f6] hover:text-[#64ffda] transition-colors">
+                      <FiGithub size={20} />
+                    </a>
+                  </div>
+                </div>
+                
+                <p className="text-[#8892b0] text-sm leading-relaxed mb-6 flex-grow">
+                  {project.description}
+                </p>
+                
+                <ul className="flex flex-wrap gap-3 text-xs font-mono text-[#64ffda] opacity-80">
+                  {project.tech.map((techItem, techIndex) => (
+                    <li key={techIndex} className="bg-[#0a192f] px-2 py-1 rounded">
+                      {techItem}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </motion.div>
           ))}
         </div>
