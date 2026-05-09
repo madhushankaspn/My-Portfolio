@@ -42,7 +42,7 @@ const Home = () => {
             <span className="w-8 h-[1px] bg-[#64ffda] mr-4 inline-block shadow-[0_0_8px_#64ffda]"></span>
             Hi, my name is
           </motion.p>
-          <h1 className="text-5xl md:text-7xl font-bold text-[#ccd6f6] mb-4 hover:text-[#64ffda] transition-colors duration-300 cursor-default drop-shadow-lg">Supun Madhusanka</h1>
+          <h1 className="text-5xl md:text-7xl font-bold text-[#ccd6f6] mb-4 hover:text-[#64ffda] transition-colors duration-300 cursor-default drop-shadow-lg">M. H. S. Perera.</h1>
           <h2 className="text-4xl md:text-5xl font-bold text-[#8892b0] mb-6 drop-shadow-md">I build things for the web & mobile.</h2>
           <p className="text-[#8892b0] max-w-xl mb-10 text-lg leading-relaxed bg-[#112240]/40 p-4 rounded-lg border border-[#233554] backdrop-blur-sm">
             I'm a Software Engineering student pursuing a B.Sc (Hons) degree at NSBM Green University. I specialize in full-stack development and have a strong focus on Software Quality Assurance (QA). I enjoy creating smart, scalable, and modern digital experiences.
@@ -89,39 +89,21 @@ const Home = () => {
         >
           <h3 className="text-4xl font-bold text-[#ccd6f6] mb-4 tracking-wide relative">
             Featured Projects
-            <span className="absolute -top-4 -right-6 text-[#64ffda] text-2xl animate-pulse"></span>
+            <span className="absolute -top-4 -right-6 text-[#64ffda] text-2xl animate-pulse">✨</span>
           </h3>
           <div className="h-[2px] bg-gradient-to-r from-transparent via-[#64ffda] to-transparent w-48 shadow-[0_0_10px_#64ffda]"></div>
         </motion.div>
 
-        {/* 
-          අලුත් Layout එක! 
-          padding-top (pt-12) දීලා තියෙනවා මැද එකට විතරක් උඩට යන්න ඉඩ හදන්න. 
-          items-start දාලා තියෙනවා Cards ඔක්කොම උඩින් පටන් ගන්න.
-        */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start pt-12 md:pt-16">
           {featuredProjects.map((project, index) => (
             <motion.div 
               key={index} 
-              initial={{ 
-                opacity: 0, 
-                // වමෙන්, යටින්, දකුණෙන් එන animation එක
-                x: index === 0 ? -50 : index === 2 ? 50 : 0, 
-                y: index === 1 ? 50 : 0 
-              }} 
+              initial={{ opacity: 0, x: index === 0 ? -50 : index === 2 ? 50 : 0, y: index === 1 ? 50 : 0 }} 
               whileInView={{ opacity: 1, x: 0, y: 0 }} 
               viewport={{ once: true, amount: 0.2 }} 
               transition={{ duration: 1, delay: index * 0.2, ease: [0.22, 1, 0.36, 1] }} 
-              
-              // *** මේක තමයි වෙනස! ***
-              // මැද කාඩ් එක (index 1) විතරක් -mt-16 (උඩට) අදිනවා. 
-              // Hover කරද්දී තව ටිකක් උඩට (y: -10) යනවා.
               whileHover={{ y: index === 1 ? -74 : -10 }} 
-
-              // මැද කාඩ් එක උඩට යන CSS එක (md screens වල විතරයි)
-              className={`bg-[#112240]/80 backdrop-blur-md rounded-xl overflow-hidden shadow-lg hover:shadow-[0_10px_30px_-15px_rgba(100,255,218,0.3)] flex flex-col group border border-[#233554] hover:border-[#64ffda]/50 transition-all duration-300 relative z-20 
-                ${index === 1 ? 'md:-mt-16' : 'md:mt-4'}
-              `}
+              className={`bg-[#112240]/80 backdrop-blur-md rounded-xl overflow-hidden shadow-lg hover:shadow-[0_10px_30px_-15px_rgba(100,255,218,0.3)] flex flex-col group border border-[#233554] hover:border-[#64ffda]/50 transition-all duration-300 relative z-20 ${index === 1 ? 'md:-mt-16' : 'md:mt-4'}`}
               style={{ willChange: "transform, opacity" }}
             >
               <div className="h-48 overflow-hidden relative border-b border-[#233554]">
@@ -132,7 +114,21 @@ const Home = () => {
                 <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-[#64ffda] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 shadow-[0_0_10px_#64ffda]"></div>
                 <div className="flex justify-between items-center mb-4">
                   <h4 className="text-xl font-bold text-[#ccd6f6] group-hover:text-[#64ffda] transition-colors">{project.title}</h4>
-                  <a href={project.github} target="_blank" rel="noreferrer" className="text-[#ccd6f6] hover:text-[#64ffda] transition-colors"><FiGithub size={20} /></a>
+                  
+                  {/* වෙනස් කළ කොටස: Blinking GitHub Icon */}
+                  <motion.a 
+                    href={project.github} 
+                    target="_blank" 
+                    rel="noreferrer" 
+                    // මේකෙන් තමයි අයිකන් එක නිවි නිවි පත්තු වෙන්නේ (opacity වෙනස් වෙනවා) සහ පොඩ්ඩක් ලොකු පොඩි වෙන්නේ (scale)
+                    animate={{ opacity: [0.3, 1, 0.3], scale: [0.9, 1.1, 0.9] }}
+                    transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                    className="text-[#64ffda] hover:text-white drop-shadow-[0_0_8px_rgba(100,255,218,0.8)]"
+                    title="View Source Code"
+                  >
+                    <FiGithub size={24} />
+                  </motion.a>
+                  
                 </div>
                 <p className="text-[#8892b0] text-sm leading-relaxed mb-6 flex-grow">{project.description}</p>
                 <ul className="flex flex-wrap gap-2 text-xs font-mono text-[#64ffda] opacity-90">
