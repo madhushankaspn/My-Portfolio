@@ -28,18 +28,18 @@ const Footer = () => {
               <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-[#64ffda] transition-all duration-300 group-hover:w-full"></span>
             </Link>
             {/* මේවා දැනටමත් /#about වගේ හදලා තියෙන්නේ, ඉස්සරහට අපි ඒ sections හැදුවම මේවා හරියටම වැඩ කරනවා */}
-            <a href="/#about" className="text-[#ccd6f6] hover:text-[#64ffda] transition-colors duration-300 relative group">
+            <Link to="/about" className="text-[#ccd6f6] hover:text-[#64ffda] transition-colors duration-300 relative group">
               About Me
               <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-[#64ffda] transition-all duration-300 group-hover:w-full"></span>
-            </a>
-            <a href="/#skills" className="text-[#ccd6f6] hover:text-[#64ffda] transition-colors duration-300 relative group">
+            </Link>
+            <Link to="/#skills" className="text-[#ccd6f6] hover:text-[#64ffda] transition-colors duration-300 relative group">
               Skills
               <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-[#64ffda] transition-all duration-300 group-hover:w-full"></span>
-            </a>
-            <a href="/#contact" className="text-[#ccd6f6] hover:text-[#64ffda] transition-colors duration-300 relative group">
+            </Link>
+            <Link to="/#contact" className="text-[#ccd6f6] hover:text-[#64ffda] transition-colors duration-300 relative group">
               Contact Me
               <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-[#64ffda] transition-all duration-300 group-hover:w-full"></span>
-            </a>
+            </Link>
           </div>
 
           {/* 3. දකුණු පැත්ත: Social Media Icons */}

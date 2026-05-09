@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { FiGithub, FiArrowRight } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import { projectsData } from '../data';
+// AboutSection එක import කරලා තියෙනවා
+import AboutSection from '../components/AboutSection';
 
 const Home = () => {
   const [particles, setParticles] = useState([]);
@@ -57,7 +59,7 @@ const Home = () => {
 
         <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }} className="md:w-2/5 flex justify-center items-center relative mt-10 md:mt-0">
           <div className="relative group cursor-pointer z-10">
-            <div className="absolute -inset-6 bg-[#64ffda] rounded-full blur-2xl opacity-20 group-hover:opacity-40 transition duration-700"></div>
+            <div className="absolute -inset-6 bg-[#64ffda] rounded-full blur-2xl opacity-20 group-hover:opacity-40 transition duration 700"></div>
             <div className="absolute -inset-2 bg-[#64ffda] rounded-full blur-lg opacity-40 group-hover:opacity-70 transition duration-500 animate-pulse"></div>
             <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-2 border-[#64ffda]/30 z-10 bg-[#112240] shadow-[0_0_20px_rgba(100,255,218,0.3)]">
               <img src="/profile.jpg" alt="Profile" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
@@ -160,6 +162,8 @@ const Home = () => {
           </Link>
         </motion.div>
       </section>
+
+     
     </>
   );
 };
