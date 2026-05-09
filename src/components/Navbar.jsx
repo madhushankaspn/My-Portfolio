@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { FiHexagon } from 'react-icons/fi';
+import { motion, AnimatePresence } from 'framer-motion';
+import { FiMenu, FiX, FiHexagon } from 'react-icons/fi';
 import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
@@ -20,7 +20,7 @@ const Navbar = () => {
     { name: 'Projects', path: '/projects' },
     { name: 'About Me', path: '/about' },
     { name: 'Skills', path: '/skills' },
-    { name: 'Contact', path: '/#contact' }
+    { name: 'Contact', path: '/contact' }
   ];
 
   return (
@@ -55,10 +55,12 @@ const Navbar = () => {
           })}
         </ul>
 
-        <button className="border border-[#64ffda] text-[#64ffda] px-5 py-2 rounded hover:bg-[#64ffda] hover:text-[#0a192f] transition-all duration-300 shadow-[0_0_10px_rgba(100,255,218,0.2)] group relative overflow-hidden">
-           <span className="absolute top-0 left-0 w-full h-full bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300 transform -skew-x-12 translate-x-[-100%] group-hover:translate-x-[100%] z-0"></span>
-           <span className="relative z-10">Hire Me</span>
-        </button>
+        <Link to="/contact">
+  <button className="border border-[#64ffda] text-[#64ffda] px-5 py-2 rounded hover:bg-[#64ffda] hover:text-[#0a192f] transition-all duration-300 shadow-[0_0_10px_rgba(100,255,218,0.2)] group relative overflow-hidden">
+     <span className="absolute top-0 left-0 w-full h-full bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300 transform -skew-x-12 translate-x-[-100%] group-hover:translate-x-[100%] z-0"></span>
+     <span className="relative z-10">Hire Me</span>
+  </button>
+</Link>
       </div>
 
       {/* 

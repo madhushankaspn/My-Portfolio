@@ -36,7 +36,7 @@ const Footer = () => {
               Skills
               <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-[#64ffda] transition-all duration-300 group-hover:w-full"></span>
             </Link>
-            <Link to="/#contact" className="text-[#ccd6f6] hover:text-[#64ffda] transition-colors duration-300 relative group">
+            <Link to="/contact" className="text-[#ccd6f6] hover:text-[#64ffda] transition-colors duration-300 relative group">
               Contact Me
               <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-[#64ffda] transition-all duration-300 group-hover:w-full"></span>
             </Link>
