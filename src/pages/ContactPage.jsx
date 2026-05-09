@@ -95,7 +95,7 @@ const ContactPage = () => {
                 </div>
                 <div>
                   <p className="text-[#8892b0] text-xs font-mono uppercase tracking-widest">Email Me</p>
-                  <a href="mailto:madhushankaspn@gmail.com" className="text-[#ccd6f6] hover:text-[#64ffda] transition-colors">madhushankaspn@gmail.com</a>
+                  <a href="mailto:madhushankasupun7@gmail.com" className="text-[#ccd6f6] hover:text-[#64ffda] transition-colors">madhushankasupun7@gmail.com</a>
                 </div>
               </motion.div>
 

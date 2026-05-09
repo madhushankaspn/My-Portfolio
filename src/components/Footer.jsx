@@ -68,7 +68,7 @@ const Footer = () => {
 
             <motion.a 
               whileHover={{ y: -5, scale: 1.1 }}
-              href="mailto:your.email@example.com" 
+              href="mailto:madhushankasupun7@gmail.com" 
               className="text-[#8892b0] hover:text-[#d946ef] transition-colors duration-300"
               title="Email"
             >
