@@ -42,7 +42,7 @@ const Home = () => {
             <span className="w-8 h-[1px] bg-[#64ffda] mr-4 inline-block shadow-[0_0_8px_#64ffda]"></span>
             Hi, my name is
           </motion.p>
-          <h1 className="text-5xl md:text-7xl font-bold text-[#ccd6f6] mb-4 hover:text-[#64ffda] transition-colors duration-300 cursor-default drop-shadow-lg">M. H. S. Perera.</h1>
+          <h1 className="text-5xl md:text-7xl font-bold text-[#ccd6f6] mb-4 hover:text-[#64ffda] transition-colors duration-300 cursor-default drop-shadow-lg">Supun Madhusanka</h1>
           <h2 className="text-4xl md:text-5xl font-bold text-[#8892b0] mb-6 drop-shadow-md">I build things for the web & mobile.</h2>
           <p className="text-[#8892b0] max-w-xl mb-10 text-lg leading-relaxed bg-[#112240]/40 p-4 rounded-lg border border-[#233554] backdrop-blur-sm">
             I'm a Software Engineering student pursuing a B.Sc (Hons) degree at NSBM Green University. I specialize in full-stack development and have a strong focus on Software Quality Assurance (QA). I enjoy creating smart, scalable, and modern digital experiences.

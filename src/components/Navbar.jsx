@@ -34,7 +34,7 @@ const Navbar = () => {
         
         <Link to="/" className="flex items-center space-x-2 text-[#64ffda] cursor-pointer group">
           <FiHexagon size={28} className="group-hover:rotate-180 transition-transform duration-700 stroke-2" />
-          <span className="text-2xl font-bold tracking-wider">Supun.</span>
+          <span className="text-2xl font-bold tracking-wider">Supun</span>
         </Link>
         
         <ul className="hidden md:flex space-x-8 text-sm font-medium">
