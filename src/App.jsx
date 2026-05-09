@@ -5,6 +5,7 @@ import Footer from './components/Footer'; // Footer එක මෙතනට impor
 import Home from './pages/Home';
 import ProjectsPage from './pages/ProjectsPage';
 import AboutPage from './pages/AboutPage';
+import SkillsPage from './pages/SkillsPage';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/projects" element={<ProjectsPage />} />
             <Route path="/about" element={<AboutPage />} />
+            <Route path="/skills" element={<SkillsPage />} />
           </Routes>
         </div>
 
