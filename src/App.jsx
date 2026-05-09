@@ -1,18 +1,27 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer'; // Footer එක මෙතනට import කරලා තියෙනවා
 import Home from './pages/Home';
 import ProjectsPage from './pages/ProjectsPage';
 
 function App() {
   return (
     <Router>
-      <div className="bg-[#0a192f] min-h-screen text-[#ccd6f6] font-sans overflow-x-hidden relative">
+      {/* flex flex-col දාලා තියෙන්නේ Footer එක හැමතිස්සෙම යටින්ම තියාගන්න */}
+      <div className="bg-[#0a192f] min-h-screen text-[#ccd6f6] font-sans overflow-x-hidden relative flex flex-col">
         <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<ProjectsPage />} />
-        </Routes>
+        
+        {/* ප්‍රධාන පිටු ටික පෙන්වන කොටස */}
+        <div className="flex-grow">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/projects" element={<ProjectsPage />} />
+          </Routes>
+        </div>
+
+        {/* හැම පිටුවකම යටින්ම පේන Footer එක */}
+        <Footer />
       </div>
     </Router>
   );

@@ -21,7 +21,6 @@ const Home = () => {
 
   return (
     <>
-      {/* Background Section */}
       <div className="fixed inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none z-0"></div>
       <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
          <div className="absolute top-[10%] left-[20%] w-72 h-72 bg-[#64ffda] rounded-full mix-blend-multiply filter blur-[128px] opacity-10 animate-blob"></div>
@@ -37,7 +36,6 @@ const Home = () => {
          ))}
       </div>
 
-      {/* Hero Section */}
       <main className="relative flex flex-col-reverse md:flex-row items-center justify-between px-10 md:px-20 pt-40 pb-20 max-w-7xl mx-auto min-h-screen z-10">
         <motion.div initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, ease: "easeOut" }} className="md:w-3/5 mt-16 md:mt-0">
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }} className="text-[#64ffda] text-lg font-mono mb-4 flex items-center">
@@ -80,29 +78,51 @@ const Home = () => {
         <div className="absolute left-10 bottom-0 w-[1px] h-32 bg-gradient-to-b from-[#64ffda] to-transparent opacity-50 hidden md:block shadow-[0_0_8px_#64ffda]"></div>
       </main>
 
-      {/* Featured Projects Section */}
       <section className="relative px-10 md:px-20 py-20 max-w-7xl mx-auto z-10 bg-[#0a192f]/50 backdrop-blur-sm rounded-3xl mb-20 border border-[#233554] overflow-hidden">
-        <motion.h3 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-3xl font-bold text-[#ccd6f6] mb-12 flex items-center">
-          <span className="text-[#64ffda] font-mono text-xl mr-3">01.</span> 
-          Featured Projects
-          <div className="h-[1px] bg-gradient-to-r from-[#233554] to-transparent w-full ml-6"></div>
-        </motion.h3>
+        
+        <motion.div 
+          initial={{ opacity: 0, y: 30, scale: 0.9 }} 
+          whileInView={{ opacity: 1, y: 0, scale: 1 }} 
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="flex flex-col items-center justify-center mb-16"
+        >
+          <h3 className="text-4xl font-bold text-[#ccd6f6] mb-4 tracking-wide relative">
+            Featured Projects
+            <span className="absolute -top-4 -right-6 text-[#64ffda] text-2xl animate-pulse"></span>
+          </h3>
+          <div className="h-[2px] bg-gradient-to-r from-transparent via-[#64ffda] to-transparent w-48 shadow-[0_0_10px_#64ffda]"></div>
+        </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* 
+          අලුත් Layout එක! 
+          padding-top (pt-12) දීලා තියෙනවා මැද එකට විතරක් උඩට යන්න ඉඩ හදන්න. 
+          items-start දාලා තියෙනවා Cards ඔක්කොම උඩින් පටන් ගන්න.
+        */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start pt-12 md:pt-16">
           {featuredProjects.map((project, index) => (
             <motion.div 
               key={index} 
-              // index එක අනුව වමෙන්, යටින් සහ දකුණෙන් එන්න හදලා තියෙන්නේ
               initial={{ 
                 opacity: 0, 
-                x: index === 0 ? -100 : index === 2 ? 100 : 0, 
-                y: index === 1 ? 100 : 0 
+                // වමෙන්, යටින්, දකුණෙන් එන animation එක
+                x: index === 0 ? -50 : index === 2 ? 50 : 0, 
+                y: index === 1 ? 50 : 0 
               }} 
               whileInView={{ opacity: 1, x: 0, y: 0 }} 
-              viewport={{ once: true, margin: "-50px" }} 
-              transition={{ duration: 0.8, delay: index * 0.15, type: "spring", bounce: 0.3 }} 
-              whileHover={{ y: -10 }} 
-              className="bg-[#112240]/80 backdrop-blur-md rounded-xl overflow-hidden shadow-lg hover:shadow-[0_10px_30px_-15px_rgba(100,255,218,0.3)] flex flex-col group border border-[#233554] hover:border-[#64ffda]/50 transition-all duration-300 relative z-20"
+              viewport={{ once: true, amount: 0.2 }} 
+              transition={{ duration: 1, delay: index * 0.2, ease: [0.22, 1, 0.36, 1] }} 
+              
+              // *** මේක තමයි වෙනස! ***
+              // මැද කාඩ් එක (index 1) විතරක් -mt-16 (උඩට) අදිනවා. 
+              // Hover කරද්දී තව ටිකක් උඩට (y: -10) යනවා.
+              whileHover={{ y: index === 1 ? -74 : -10 }} 
+
+              // මැද කාඩ් එක උඩට යන CSS එක (md screens වල විතරයි)
+              className={`bg-[#112240]/80 backdrop-blur-md rounded-xl overflow-hidden shadow-lg hover:shadow-[0_10px_30px_-15px_rgba(100,255,218,0.3)] flex flex-col group border border-[#233554] hover:border-[#64ffda]/50 transition-all duration-300 relative z-20 
+                ${index === 1 ? 'md:-mt-16' : 'md:mt-4'}
+              `}
+              style={{ willChange: "transform, opacity" }}
             >
               <div className="h-48 overflow-hidden relative border-b border-[#233554]">
                 <div className="absolute inset-0 bg-[#0a192f]/60 group-hover:bg-transparent transition-colors duration-500 z-10 mix-blend-multiply"></div>
@@ -125,13 +145,11 @@ const Home = () => {
           ))}
         </div>
 
-        {/* අලුතින් Pop-up වෙන View All Projects Button එක */}
         <motion.div 
-          initial={{ opacity: 0, scale: 0.5 }} 
-          whileInView={{ opacity: 1, scale: 1 }} 
-          viewport={{ once: true }} 
-          // Delay 0.8 දැම්මම Projects 3 ආවට පස්සේ තමයි මේක එන්නේ
-          transition={{ duration: 0.5, delay: 0.8, type: "spring", stiffness: 200 }} 
+          initial={{ opacity: 0, y: 30 }} 
+          whileInView={{ opacity: 1, y: 0 }} 
+          viewport={{ once: true, amount: 0.8 }} 
+          transition={{ duration: 1.2, delay: 0.8, ease: [0.22, 1, 0.36, 1] }} 
           className="mt-16 flex justify-center relative z-20"
         >
           <Link to="/projects">
