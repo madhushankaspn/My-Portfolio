@@ -58,21 +58,23 @@ const Home = () => {
         <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }} className="md:w-2/5 flex justify-center items-center relative mt-10 md:mt-0">
           <div className="relative group cursor-pointer z-10">
             
-            {/* වෙනස් කළ කොටස: ඔයා එවපු පින්තූරයේ පාට දාලා, Blur සහ Spread එක වැඩි කළා */}
-            <div className="absolute -inset-4 bg-gradient-to-tr from-[#00ffff] via-[#d946ef] to-[#00ffff] rounded-full blur-xl opacity-50 group-hover:opacity-80 transition duration-1000 group-hover:duration-500 animate-spin-slow"></div>
+            {/* අලුත් Glow එක: හරියටම ඔයා ඉල්ලපු Cyan පාට, වටේට ලස්සනට Spread වෙනවා */}
+            <div className="absolute -inset-6 bg-[#64ffda] rounded-full blur-2xl opacity-20 group-hover:opacity-40 transition duration-700"></div>
             
-            {/* පින්තූරය වටේට ලා සුදු/වීදුරු පාට Border එකක් දැම්මා පින්තූරය කැපී පේන්න */}
-            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-2 border-white/20 z-10 bg-[#112240] shadow-[0_0_15px_rgba(0,0,0,0.5)]">
+            {/* පින්තූරය යටින් තව පොඩි තද Glow එකක් (Pulse වෙන) */}
+            <div className="absolute -inset-2 bg-[#64ffda] rounded-full blur-lg opacity-40 group-hover:opacity-70 transition duration-500 animate-pulse"></div>
+
+            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-2 border-[#64ffda]/30 z-10 bg-[#112240] shadow-[0_0_20px_rgba(100,255,218,0.3)]">
               <img src="/profile.jpg" alt="Profile" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
             </div>
 
-            <motion.div animate={{ y: [-15, 15, -15] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }} className="absolute top-10 -left-10 md:-left-14 bg-[#112240] p-4 rounded-full border border-[#233554] text-[#00ffff] shadow-[0_0_20px_rgba(0,255,255,0.2)] z-20 backdrop-blur-md"><FiMonitor size={28} /></motion.div>
-            <motion.div animate={{ y: [15, -15, 15] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }} className="absolute bottom-10 -right-8 md:-right-12 bg-[#112240] p-4 rounded-full border border-[#233554] text-[#d946ef] shadow-[0_0_20px_rgba(217,70,239,0.2)] z-20 backdrop-blur-md"><FiSmartphone size={28} /></motion.div>
+            <motion.div animate={{ y: [-15, 15, -15] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }} className="absolute top-10 -left-10 md:-left-14 bg-[#112240] p-4 rounded-full border border-[#233554] text-[#64ffda] shadow-[0_0_20px_rgba(100,255,218,0.2)] z-20 backdrop-blur-md"><FiMonitor size={28} /></motion.div>
+            <motion.div animate={{ y: [15, -15, 15] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }} className="absolute bottom-10 -right-8 md:-right-12 bg-[#112240] p-4 rounded-full border border-[#233554] text-[#007bff] shadow-[0_0_20px_rgba(0,123,255,0.2)] z-20 backdrop-blur-md"><FiSmartphone size={28} /></motion.div>
             <motion.div animate={{ y: [-10, 10, -10] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 2 }} className="absolute -top-6 right-10 bg-[#112240] p-3 rounded-full border border-[#233554] text-[#ccd6f6] shadow-[0_0_15px_rgba(204,214,246,0.1)] z-20 backdrop-blur-md"><FiDatabase size={20} /></motion.div>
           </div>
         </motion.div>
         
-        <div className="absolute left-10 bottom-0 w-[1px] h-32 bg-gradient-to-b from-[#00ffff] to-transparent opacity-50 hidden md:block shadow-[0_0_8px_#00ffff]"></div>
+        <div className="absolute left-10 bottom-0 w-[1px] h-32 bg-gradient-to-b from-[#64ffda] to-transparent opacity-50 hidden md:block shadow-[0_0_8px_#64ffda]"></div>
       </main>
 
       <section className="relative px-10 md:px-20 py-20 max-w-7xl mx-auto z-10 bg-[#0a192f]/50 backdrop-blur-sm rounded-3xl mb-20 border border-[#233554]">
