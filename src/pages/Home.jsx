@@ -17,12 +17,10 @@ const Home = () => {
     setParticles(newParticles);
   }, []);
 
-  // මුල්ම Projects 3 විතරක් ගන්නවා
   const featuredProjects = projectsData.slice(0, 3);
 
   return (
     <>
-      {/* Background Effects (කලින් තිබ්බ එකමයි) */}
       <div className="fixed inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none z-0"></div>
       <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
          <div className="absolute top-[10%] left-[20%] w-72 h-72 bg-[#64ffda] rounded-full mix-blend-multiply filter blur-[128px] opacity-10 animate-blob"></div>
@@ -38,7 +36,6 @@ const Home = () => {
          ))}
       </div>
 
-      {/* Hero Section (කලින් තිබ්බ එකමයි) */}
       <main className="relative flex flex-col-reverse md:flex-row items-center justify-between px-10 md:px-20 pt-40 pb-20 max-w-7xl mx-auto min-h-screen z-10">
         <motion.div initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, ease: "easeOut" }} className="md:w-3/5 mt-16 md:mt-0">
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }} className="text-[#64ffda] text-lg font-mono mb-4 flex items-center">
@@ -60,19 +57,24 @@ const Home = () => {
 
         <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }} className="md:w-2/5 flex justify-center items-center relative mt-10 md:mt-0">
           <div className="relative group cursor-pointer z-10">
-            <div className="absolute -inset-1 bg-gradient-to-r from-[#64ffda] to-[#007bff] rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-spin-slow"></div>
-            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-[#0a192f] z-10 bg-[#112240]">
+            
+            {/* වෙනස් කළ කොටස: ඔයා එවපු පින්තූරයේ පාට දාලා, Blur සහ Spread එක වැඩි කළා */}
+            <div className="absolute -inset-4 bg-gradient-to-tr from-[#00ffff] via-[#d946ef] to-[#00ffff] rounded-full blur-xl opacity-50 group-hover:opacity-80 transition duration-1000 group-hover:duration-500 animate-spin-slow"></div>
+            
+            {/* පින්තූරය වටේට ලා සුදු/වීදුරු පාට Border එකක් දැම්මා පින්තූරය කැපී පේන්න */}
+            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-2 border-white/20 z-10 bg-[#112240] shadow-[0_0_15px_rgba(0,0,0,0.5)]">
               <img src="/profile.jpg" alt="Profile" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
             </div>
-            <motion.div animate={{ y: [-15, 15, -15] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }} className="absolute top-10 -left-10 md:-left-14 bg-[#112240] p-4 rounded-full border border-[#233554] text-[#64ffda] shadow-[0_0_20px_rgba(100,255,218,0.2)] z-20 backdrop-blur-md"><FiMonitor size={28} /></motion.div>
-            <motion.div animate={{ y: [15, -15, 15] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }} className="absolute bottom-10 -right-8 md:-right-12 bg-[#112240] p-4 rounded-full border border-[#233554] text-[#007bff] shadow-[0_0_20px_rgba(0,123,255,0.2)] z-20 backdrop-blur-md"><FiSmartphone size={28} /></motion.div>
+
+            <motion.div animate={{ y: [-15, 15, -15] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }} className="absolute top-10 -left-10 md:-left-14 bg-[#112240] p-4 rounded-full border border-[#233554] text-[#00ffff] shadow-[0_0_20px_rgba(0,255,255,0.2)] z-20 backdrop-blur-md"><FiMonitor size={28} /></motion.div>
+            <motion.div animate={{ y: [15, -15, 15] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }} className="absolute bottom-10 -right-8 md:-right-12 bg-[#112240] p-4 rounded-full border border-[#233554] text-[#d946ef] shadow-[0_0_20px_rgba(217,70,239,0.2)] z-20 backdrop-blur-md"><FiSmartphone size={28} /></motion.div>
             <motion.div animate={{ y: [-10, 10, -10] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 2 }} className="absolute -top-6 right-10 bg-[#112240] p-3 rounded-full border border-[#233554] text-[#ccd6f6] shadow-[0_0_15px_rgba(204,214,246,0.1)] z-20 backdrop-blur-md"><FiDatabase size={20} /></motion.div>
           </div>
         </motion.div>
-        <div className="absolute left-10 bottom-0 w-[1px] h-32 bg-gradient-to-b from-[#64ffda] to-transparent opacity-50 hidden md:block shadow-[0_0_8px_#64ffda]"></div>
+        
+        <div className="absolute left-10 bottom-0 w-[1px] h-32 bg-gradient-to-b from-[#00ffff] to-transparent opacity-50 hidden md:block shadow-[0_0_8px_#00ffff]"></div>
       </main>
 
-      {/* Featured Projects Section */}
       <section className="relative px-10 md:px-20 py-20 max-w-7xl mx-auto z-10 bg-[#0a192f]/50 backdrop-blur-sm rounded-3xl mb-20 border border-[#233554]">
         <motion.h3 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-3xl font-bold text-[#ccd6f6] mb-12 flex items-center">
           <span className="text-[#64ffda] font-mono text-xl mr-3">01.</span> 
@@ -80,7 +82,6 @@ const Home = () => {
           <div className="h-[1px] bg-gradient-to-r from-[#233554] to-transparent w-full ml-6"></div>
         </motion.h3>
 
-        {/* මුල් Projects 3 විතරක් පෙන්වයි */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {featuredProjects.map((project, index) => (
             <motion.div key={index} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-50px" }} transition={{ delay: index * 0.1, duration: 0.5 }} whileHover={{ y: -10 }} className="bg-[#112240]/80 backdrop-blur-md rounded-xl overflow-hidden shadow-lg hover:shadow-[0_10px_30px_-15px_rgba(100,255,218,0.3)] flex flex-col group border border-[#233554] hover:border-[#64ffda]/50 transition-all duration-300 relative">
@@ -105,7 +106,6 @@ const Home = () => {
           ))}
         </div>
 
-        {/* "View All Projects" Button එක */}
         <div className="mt-16 flex justify-center">
           <Link to="/projects">
             <motion.button 
