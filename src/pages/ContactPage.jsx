@@ -69,7 +69,7 @@ const ContactPage = () => {
         >
           <h1 className="text-4xl md:text-6xl font-bold text-[#ccd6f6] mb-4 relative">
             Get In <span className="text-[#64ffda]">Touch</span>
-            <span className="absolute -top-4 -right-10 text-3xl animate-pulse">👋</span>
+            <span className="absolute -top-4 -right-10 text-3xl animate-pulse"></span>
           </h1>
           <p className="text-[#8892b0] text-lg max-w-xl mx-auto leading-relaxed">
             I'm currently looking for new opportunities. Whether you have a question, a project idea, or just want to say hi, my inbox is always open!
@@ -148,7 +148,7 @@ const ContactPage = () => {
                 <div className="space-y-2">
                   <label className="text-[#64ffda] font-mono text-xs uppercase tracking-wider">Your Name</label>
                   {/* name="from_name" කියන එක template එකට සමාන වෙන්න ඕනේ */}
-                  <input type="text" name="from_name" placeholder="Supun Perera" required className="w-full bg-[#0a192f] border border-[#233554] rounded-lg px-4 py-3 text-[#ccd6f6] outline-none focus:border-[#64ffda] transition-all" />
+                  <input type="text" name="from_name" placeholder="Supun Madhusanka" required className="w-full bg-[#0a192f] border border-[#233554] rounded-lg px-4 py-3 text-[#ccd6f6] outline-none focus:border-[#64ffda] transition-all" />
                 </div>
                 <div className="space-y-2">
                   <label className="text-[#64ffda] font-mono text-xs uppercase tracking-wider">Your Email</label>

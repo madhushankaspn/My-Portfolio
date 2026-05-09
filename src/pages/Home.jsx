@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FiGithub, FiArrowRight } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
-import { projectsData } from '../data';
+import { projectsData } from '../../public/data';
 import AboutSection from '../components/AboutSection';
 
 const Home = () => {

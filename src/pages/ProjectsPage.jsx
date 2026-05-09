@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 // FiFigma කියන එක අලුතින් ගත්තා Figma Icon එකට
 import { FiGithub, FiFigma } from 'react-icons/fi'; 
-import { projectsData } from '../data';
+import { projectsData } from '../../public/data';
 
 const ProjectsPage = () => {
   const [filter, setFilter] = useState('All');
