@@ -79,17 +79,17 @@ const Home = () => {
 
             {/* 2. QA Engineer Badge (Top Right) */}
             <motion.div animate={{ y: [-5, 5, -5] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 2 }} className="absolute -top-4 right-0 md:right-4 bg-white dark:bg-white/5 backdrop-blur-md border border-slate-200 dark:border-white/10 px-4 py-2 rounded-2xl text-slate-800 dark:text-[#ccd6f6] text-xs md:text-sm font-mono shadow-lg z-20 flex items-center gap-2">
-              <span className="text-[#d946ef]">✅</span> QA Engineer
+              <span className="text-[#d946ef]"></span> QA Engineer
             </motion.div>
 
             {/* 3. Mobile Dev Badge (Bottom Right) */}
             <motion.div animate={{ y: [8, -8, 8] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }} className="absolute bottom-12 -right-4 md:-right-12 bg-white dark:bg-white/5 backdrop-blur-md border border-slate-200 dark:border-white/10 px-4 py-2 rounded-2xl text-slate-800 dark:text-[#ccd6f6] text-xs md:text-sm font-mono shadow-lg z-20 flex items-center gap-2">
-              <span className="text-[#00ffff]">📱</span> Mobile Dev
+              <span className="text-[#00ffff]"></span> Mobile Dev
             </motion.div>
 
             {/* 4. UI/UX Designer Badge (Bottom Left) */}
             <motion.div animate={{ y: [5, -5, 5] }} transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }} className="absolute bottom-4 -left-4 md:-left-10 bg-white dark:bg-white/5 backdrop-blur-md border border-slate-200 dark:border-white/10 px-4 py-2 rounded-2xl text-slate-800 dark:text-[#ccd6f6] text-xs md:text-sm font-mono shadow-lg z-20 flex items-center gap-2">
-              <span className="text-[#ffb347]">🎨</span> UI/UX Designer
+              <span className="text-[#ffb347]"></span> UI/UX Designer
             </motion.div>
           </div>
         </motion.div>
