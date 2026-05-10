@@ -1,16 +1,70 @@
-# React + Vite
+# 🚀 My Professional Portfolio - madhusanka.me
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal portfolio repository! This project is a reflection of my journey as a Software Engineering student, showcasing my technical expertise, academic projects, and professional growth.
 
-Currently, two official plugins are available:
+🌐 **Live Website:** [https://madhusanka.me](https://madhusanka.me)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+![Portfolio Preview](<img width="1815" height="821" alt="image" src="https://github.com/user-attachments/assets/94d2442c-80c0-4d57-a97c-094c14e88ac3" />
+)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 👨‍💻 About Me
 
-## Expanding the ESLint configuration
+I am **Supun Madhusanka**, a 3rd-year Software Engineering undergraduate at **NSBM Green University**. I am passionate about building impactful digital solutions and I am currently pursuing a career path in **Software Quality Assurance (QA)** and **Full-Stack Development**.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🏢 **Currently:** Java Programming Intern at **Hex Softwares**.
+- 🎓 **Education:** B.Sc. (Hons) in Software Engineering.
+- 🎯 **Focus:** Automation Testing (Playwright), Web Development (MERN, .NET), and Mobile Development (Flutter) & UI UX.
+- 🏆 **Community:** Active member of CSSL and FOSS Community at NSBM.
+
+---
+
+## 🛠️ Tech Stack
+
+This portfolio is built with a modern and performant tech stack:
+
+* **Frontend:** React.js (Vite)
+* **Styling:** Tailwind CSS
+* **Animations:** Framer Motion
+* **Icons:** React Icons / Lucide React
+* **Deployment:** Netlify
+* **Domain:** Namecheap
+
+---
+
+## 📁 Featured Projects
+
+Some of the key projects showcased in this portfolio:
+
+1.  **Fresh Goviya:** A digital farm-to-consumer mobile platform connecting farmers directly with buyers.
+2.  **Smart Garbage Collection:** A Flutter-based civic solution for real-time waste management reporting.
+---
+
+## 🚀 Getting Started
+
+To run this project locally, follow these steps:
+
+1.  **Clone the Repo:**
+    ```bash
+    git clone [https://github.com/madhusankaspn/my-portfolio.git](https://github.com/madhusankaspn/my-portfolio.git)
+    ```
+2.  **Install Dependencies:**
+    ```bash
+    npm install
+    ```
+3.  **Run Development Server:**
+    ```bash
+    npm run dev
+    ```
+
+---
+
+## 📬 Contact & Connect
+
+-   **LinkedIn:** [linkedin.com/in/madhusankaspn](https://linkedin.com/in/madhusankaspn)
+-   **Email:** [tasmadhusanka@students.nsbm.ac.lk](mailto:tasmadhusanka@students.nsbm.ac.lk)
+-   **GitHub:** [github.com/madhusankaspn](https://github.com/madhusankaspn)
+
+---
+⭐️ If you find my portfolio interesting, feel free to give this repository a star!
