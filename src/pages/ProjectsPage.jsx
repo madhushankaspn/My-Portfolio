@@ -41,7 +41,7 @@ const ProjectsPage = () => {
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
             className="absolute -top-6 -right-10 text-3xl"
           >
-            🚀
+            
           </motion.span>
         </h1>
         <p className="text-[#8892b0] text-lg max-w-2xl mx-auto">

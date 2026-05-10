@@ -107,7 +107,7 @@ const Home = () => {
         >
           <h3 className="text-4xl font-bold text-slate-800 dark:text-[#ccd6f6] mb-4 tracking-wide relative">
             Featured Projects
-            <span className="absolute -top-4 -right-6 text-[#64ffda] text-2xl animate-pulse">✨</span>
+            <span className="absolute -top-4 -right-6 text-[#64ffda] text-2xl animate-pulse"></span>
           </h3>
           <div className="h-[2px] bg-gradient-to-r from-transparent via-[#64ffda] to-transparent w-48 shadow-[0_0_10px_#64ffda]"></div>
         </motion.div>
