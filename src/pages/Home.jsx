@@ -74,7 +74,7 @@ const Home = () => {
 
             {/* 1. Full-Stack Badge (Top Left) */}
             <motion.div animate={{ y: [-8, 8, -8] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }} className="absolute top-12 -left-8 md:-left-16 bg-white dark:bg-white/5 backdrop-blur-md border border-slate-200 dark:border-white/10 px-4 py-2 rounded-2xl text-slate-800 dark:text-[#ccd6f6] text-xs md:text-sm font-mono shadow-lg z-20 flex items-center gap-2">
-              <span className="text-[#64ffda]">{'</>'}</span> Full-Stack
+              <span className="text-[#64ffda]">{}</span> Full-Stack
             </motion.div>
 
             {/* 2. QA Engineer Badge (Top Right) */}
