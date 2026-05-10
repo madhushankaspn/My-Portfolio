@@ -4,8 +4,7 @@ Welcome to my personal portfolio repository! This project is a reflection of my 
 
 🌐 **Live Website:** [https://madhusanka.me](https://madhusanka.me)
 
-![Portfolio Preview](<img width="1815" height="821" alt="image" src="https://github.com/user-attachments/assets/94d2442c-80c0-4d57-a97c-094c14e88ac3" />
-)
+<img width="1864" height="840" alt="image" src="https://github.com/user-attachments/assets/42cc78bf-7252-4adf-9622-7f1c1ac196fd" />
 
 ---
 
